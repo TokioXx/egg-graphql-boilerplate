@@ -1,0 +1,56 @@
+{
+  "name": "graphql-todos",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "dataloader": "1.3.0",
+    "egg": "^1.7.0",
+    "egg-development-proxyworker": "1.1.1",
+    "egg-graphql": "1.0.0",
+    "egg-scripts": "^1.0.0",
+    "egg-sequelize": "^3.1.0",
+    "egg-session": "2.1.1",
+    "egg-validate": "1.0.0",
+    "graphql": "^0.11.3",
+    "lodash": "4.17.4",
+    "mysql2": "1.4.2"
+  },
+  "devDependencies": {
+    "autod": "^2.9.0",
+    "autod-egg": "^1.0.0",
+    "egg-bin": "^4.1.0",
+    "egg-ci": "^1.8.0",
+    "egg-development-proxyworker": "1.1.1",
+    "egg-mock": "^3.9.0",
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb-base": "11.3.2",
+    "eslint-config-egg": "^5.0.0",
+    "husky": "^0.14.3",
+    "validate-commit-msg": "2.14.0",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon",
+    "stop": "egg-scripts stop",
+    "dev": "egg-bin dev",
+    "test": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod",
+    "commitmsg": "validate-commit-msg"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "publishConfig": {
+    "registry": "http://172.19.3.186:4873/"
+  },
+  "author": "",
+  "license": "MIT"
+}

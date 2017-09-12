@@ -1,0 +1,5 @@
+
+type Query {
+  user(id: ID!): User
+  tags: [String!]
+}

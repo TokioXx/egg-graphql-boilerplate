@@ -1,0 +1,11 @@
+{
+  "extends": "eslint-config-airbnb-base",
+  "rules": {
+    "strict": "off",
+    "class-methods-use-this": "off",
+    "global-require": "off"
+  },
+  "env": {
+    "mocha": true
+  }
+}
