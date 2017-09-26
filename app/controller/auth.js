@@ -1,8 +1,11 @@
-
 exports.login = async (ctx) => {
   const createRule = {
-    name: { type: 'string' },
-    password: { type: 'string' },
+    name: {
+      type: 'string',
+    },
+    password: {
+      type: 'string',
+    },
   };
   // 校验参数
   ctx.validate(createRule);
@@ -22,5 +25,29 @@ exports.login = async (ctx) => {
     code: '0',
     message: 'success',
     data: user,
+  };
+};
+
+exports.register = async (ctx) => {
+  const createRule = {
+    name: {
+      type: 'string',
+    },
+    password: {
+      type: 'string',
+    },
+  };
+  // 校验参数
+  ctx.validate(createRule);
+
+  const user = await ctx.model.User.create(ctx.request.body);
+  ctx.body = {
+    code: 0,
+    message: 'success',
+    data: {
+      user: {
+        name: user.name,
+      },
+    },
   };
 };
